@@ -43,9 +43,13 @@ public class mintNumbers {
     }
     
     /**
-     * Floor
+     * Floor finds the greatest integer less than or equal to that number
+     * 
+     * @param <E> Generic datatype belonging to numbers
+     * @param number the number to be floor-ed
+     * @return greatest integer belonging to <code>int</code>
      */
-    public static < E extends Number, Comparable> int floor(E number) {
+    public static < E extends Number> int floor(E number) {
         if(number.intValue() == number.doubleValue()) {
             return number.intValue();
         } else {
@@ -58,9 +62,13 @@ public class mintNumbers {
     }
     
     /**
-     * Ceil
+     * Ceil finds the least integer greater than or equal to that number
+     * 
+     * @param <E> Generic datatype belonging to numbers
+     * @param number the number to be find the ceil of
+     * @return least integer belonging to <code>int</code> datatype
      */
-    public static < E extends Number,Comparable> int ceil(E number) {
+    public static < E extends Number> int ceil(E number) {
        if(number.intValue() == number.doubleValue()) {
             return number.intValue();
         } else {

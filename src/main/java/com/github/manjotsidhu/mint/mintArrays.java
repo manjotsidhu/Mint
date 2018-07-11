@@ -12,6 +12,9 @@ public class mintArrays {
     
     /**
      * Reverses array of any data type
+     * 
+     * @param <E> Generic datatype belonging to arrays
+     * @param ar array to be reversed
      */
     public static < E > void reverse(E[] ar) {
         for(int i = 0; i < mintNumbers.floor(ar.length/2); i++) {
