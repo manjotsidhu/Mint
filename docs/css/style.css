@@ -1,0 +1,29 @@
+/* Override Bootstrap Responsive CSS fixed navbar */
+ @media (max-width: 979px) {
+    .navbar-fixed-top, .navbar-fixed-bottom {
+        position: relative;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+body > .container {
+    padding: 5px 0px;
+}
+
+.toolbar-item {
+	position:relative;
+}
+
+body {
+	position:relative;
+}
+
+.sticky {
+	top:15px;
+}
+
+.scrollspy-example {
+	height: 100%;
+	overflow-y: auto;
+}

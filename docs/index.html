@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mint Java Library</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target="#scrollspy" data-offset="0" >
+
+    <!-- Start your project here-->
+	<div class = "container">
+	<div class = "row">
+		<div class = "nav navbar-fixed-top col-1 col-md-2 pt-3">
+			<div id="scrollspy" class=" ">
+			  <ul id="scrollspy" class="sticky sticky-top  nav nav-pills default-pills smooth-scroll" data-allow-hashes="true">
+					<li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li> 
+					<li class="nav-item"><a class="nav-link" href="#download">Downloads</a></li>
+					<li class="nav-item"><a class="nav-link" href="#mintmaven">Using Mint with Maven</a></li>
+				  	<li class="nav-item"><a class="nav-link" href="#numbers">Numbers</a><ul class="nav ml-3">
+						<li class="nav-item"><a class="nav-link" href="#min">Min</a></li>
+						<li class="nav-item"><a class="nav-link" href="#max">Max</a></li>
+						<li class="nav-item"><a class="nav-link" href="#floor">Floor</a></li>
+						<li class="nav-item"><a class="nav-link" href="#ceil">Ceil</a></li>
+				  	</ul></li>
+					<li class="nav-item"><a class="nav-link" href="#arrays">Arrays</a><ul class="nav ml-3">
+						<li class="nav-item"><a class="nav-link" href="#reverse">Reverse</a></li>
+						<li class="nav-item"><a class="nav-link" href="#sortInt">Sort (Integer)</a></li>
+						<li class="nav-item"><a class="nav-link" href="#sortDInt">SortD (Integer)</a></li>
+						<li class="nav-item"><a class="nav-link" href="#sortStr">Sort (String)</a></li>
+						<li class="nav-item"><a class="nav-link" href="#sortDStr">SortD (String)</a></li>
+				  	</ul></li>
+				  	<li class="nav-item"><a class="nav-link" href="#strings">Strings</a><ul class="nav ml-3">
+						<li class="nav-item"><a class="nav-link" href="#g">Coming Soon</a></li>
+				  	</ul></li>
+			  </ul>
+			</div>
+		</div>
+		
+		<div class = "scrollspy-example col-10">
+		
+			<div class="row">
+			<div class="col-md-12">
+				<div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+					<div class="text-white text-center my-2">
+						<div>
+							<h1 class="card-title pt-2 mb-3 font-bold"><strong>Mint Java Library</strong></h1>
+							<a class="btn btn-outline-white"><i class="fa fa-clone left"></i>Github</a>
+							<a class="btn btn-outline-white"><i class="fa fa-clone left"></i>Maven</a>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mt-4">
+				<h3 id="introduction">Introduction</h3><hr>
+				<p>Mint Java Library is a collection of various useful functional methods for Arrays, Strings and Numbers.
+				It is mostly designed for Java beginners or can be used just as a kick-start to get the touch of Java programming language.<br></p>
+			</div>
+			
+			<div class="mt-4">
+				<h3 id="download">Downloads</h3>
+				<button type="button" class="btn btn-success btn-rounded">Compiled Mint library <span class="badge badge-pill badge-light">JAR</span></h1></button>
+				<button type="button" class="btn btn-default btn-rounded">Source Code <span class="badge badge-pill badge-light">JAR</span></button>
+				<button class="btn blue-gradient btn-rounded">JavaDoc <span class="badge badge-pill badge-light">JAR</span></button>
+			</div>
+
+			<div class="mt-4">
+				<h3 id="mintmaven">Using Mint with Maven</h3><hr>
+			
+				<p>To use mint with maven, you can use mint library available in Maven Central by adding the following dependency:<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				&lt;dependencies&gt;
+					&lt;dependency&gt;
+						&lt;groupId&gt;com.github.manjotsidhu.mint&lt;/groupId&gt;
+						&lt;artifactId&gt;mint&lt;/artifactId&gt;
+						&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+						&lt;scope&gt;compile&lt;/scope&gt;
+					&lt;/dependency&gt;
+				&lt;/dependencies&gt;</code></pre>		
+				</p>
+					
+			</div>
+	
+			<div class="mt-4">
+				<h3 id="numbers">Numbers <small class="text-muted"><code>com.github.manjotsidhu.mint.mintNumbers</code></small></h3>
+				<p>Inorder to use <code>mintNumbers</code>, Create an object of the class by:</p>
+				<samp>mintNumbers mintMe = new mintNumbers();</samp><hr>				
+
+				<h4 id="min"><strong>Min</strong> <small class="text-muted"><code>&lt;T extends Number&gt; T min(T x, T y)</code></small></h4>
+				<p>Simply computes min of any two real numbers, <code>x</code> and <code>y</code> belonging to the same datatype <code>T</code> and 
+				returns the minimum value of the same data type <code>T</code>.
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				mintMe.min(0.9999, 0.99999);</code></pre>		
+				</p><hr>
+				
+				<h4 id="max"><strong>Max</strong> <small class="text-muted"><code>&lt;T extends Number&gt; T max(T x, T y)</code></small></h4>
+				<p>Simply computes max of any two real numbers, <code>x</code> and <code>y</code> belonging to the same datatype <code>T</code> and 
+				returns the maximum value of the same data type <code>T</code>.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				mintMe.max(9.99991, 9.99992);</code></pre>
+				</p><hr>
+
+				<h4 id="floor"><strong>Floor</strong> <small class="text-muted"><code>&lt;E extends Number&gt; int floor(E number)</code></small></h4>
+				<p>Floor inputs any real number <code>X</code> of datatype <code>E</code> and returns the greatest integer less than or equal to x.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				mintMe.floor(-2.7);</code></pre>
+				</p><hr>
+
+				<h4 id="ceil"><strong>Ceil</strong> <small class="text-muted"><code>&lt;E extends Number,Comparable&gt; int ceil(E number)</code></small></h4>
+				<p>Ceil inputs any real number <code>X</code> of datatype <code>E</code> and returns the least integer greater than or equal to x.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				mintMe.ceil(-99.4);</code></pre>
+				</p><hr>	
+			</div>
+
+			<div class="mt-4">
+				<h3 id="arrays">Arrays <small class="text-muted"><code>com.github.manjotsidhu.mint.mintArrays</code></small></h3>
+				<p>Inorder to use <code>mintArrays</code>, Create an object of the class by:</p>
+				<samp>mintArrays mintMe = new mintArrays();</samp><hr>		
+			
+				<h4 id="reverse"><strong>Reverse</strong> <small class="text-muted"><code>reverse(E[] arr);</code></small></h4>
+				<p>Reverses Array <code>arr</code> of <i>almost</i> any datatype <code>E</code>.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				String[] myArray = {"manjot", "singh", "sidhu"};
+				mintMe.reverse(myArray);</code></pre>
+				</p><hr>
+				
+				<h4 id="sortInt"><strong>Sort</strong> <small class="text-muted"><code>sort(int[] arr);</code></small></h4>
+				<p>Sorts Array <code>arr</code> of only <code>int[]</code> datatype in ascending order.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				int[] myArray = {6, 4, 2, 1, 3, 5, 8, 1, 99, 1222};
+				mintMe.sort(myArray);</code></pre>
+				</p><hr>
+
+				<h4 id="sortDInt"><strong>SortD</strong> <small class="text-muted"><code>sortD(int[] arr);</code></small></h4>
+				<p>Sorts Array <code>arr</code> of only <code>int[]</code> datatype in descending order.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				int[] myArray = {6, 4, 2, 1, 3, 5, 8, 1, 99, 1};
+				mintMe.sort(myArray);</code></pre>
+				</p><hr>
+
+				<h4 id="sortStr"><strong>Sort</strong> <small class="text-muted"><code>sort(String[] arr);</code></small></h4>
+				<p>Sorts Array <code>arr</code> of only <code>String[]</code> datatype in ascending order.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
+				mintMe.sort(myArray);</code></pre>
+				</p><hr>
+
+				<h4 id="sortDStr"><strong>SortD</strong> <small class="text-muted"><code>sortD(String[] arr);</code></small></h4>
+				<p>Sorts Array <code>arr</code> of only <code>String[]</code> datatype in descending order.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
+				mintMe.sort(myArray);</code></pre>
+				</p><hr>	
+			</div>
+
+			<div class="mt-4">
+				<h3 id="strings">Strings</h3><hr>
+			
+				<h4 id="cs"><strong>Coming Soon</strong> <small class="text-muted"><code></code></small></h4>	
+			</div>
+	
+		</div>
+	</div>
+	</div>
+    <!-- /Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
