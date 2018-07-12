@@ -111,7 +111,7 @@ public class mintArrays {
      * Compares two arrays
      *
      *
-     * @param <E> Type E Array Object
+     * @param <E> Datatype E Array Object
      * @param array1 First Array Object
      * @param array2 Second Array Object
      * @return boolean result
@@ -133,12 +133,12 @@ public class mintArrays {
      * Compares two arrays element wise
      *
      *
-     * @param <E> Type E Array Object
+     * @param <E> Dataype E Array Object
      * @param array1 First Array Object
      * @param array2 Second Array Object
      * @return boolean array after comparing
      */
-    public static < E> boolean[] compareE(E[] array1, E[] array2) {
+    public static <E> boolean[] compareE(E[] array1, E[] array2) {
         boolean[] result = new boolean[mintNumbers.max(array1.length, array2.length)];
 
         for (int index = 0; index < mintNumbers.min(array1.length, array2.length); index++) {
@@ -149,5 +149,31 @@ public class mintArrays {
             }
         }
         return result;
+    }
+    
+    /**
+     * First returns the first element of the given array
+     * 
+     * @param <E> Generics datatype E belonging to array object
+     * @param array input argument
+     * @return single first element of E datatype
+     */
+    public static <E> E first(E[] array) {
+        return array[0];
+    }
+    
+    /**
+     * returns first <code>n</code> elements from the <code>array</code>
+     * 
+     * @param <E> Generics Datatype
+     * @param array input array as argument
+     * @param n number of first elements to return
+     * @return <code>E[]</code> array having first <code>n</code> elements
+     */
+    public static <E> E[] first(E[] array, int n) {
+        Object[] newArr = new Object[n];
+ 
+        System.arraycopy(array, 0, newArr, 0, n);       
+        return (E[]) newArr;
     }
 }
