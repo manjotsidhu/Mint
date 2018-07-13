@@ -27,3 +27,7 @@ body {
 	height: 100%;
 	overflow-y: auto;
 }
+
+kbd {
+	background-color: #4f4f4f;
+}

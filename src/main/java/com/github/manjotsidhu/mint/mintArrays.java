@@ -51,6 +51,34 @@ public class mintArrays {
         }
 
     }
+    
+    /**
+     * Sorts integer object array in ascending order
+     *
+     * @param sortMe integer array to be sorted
+     */
+    public static void sort(Integer[] sortMe) {
+        for (int i = 0; i < sortMe.length; i++) {
+            // Track number of elements swapped during a single array traversal
+            int numberOfSwaps = 0;
+
+            for (int j = 0; j < sortMe.length - 1; j++) {
+                // Swap adjacent elements if they are in decreasing order
+                if (sortMe[j] > sortMe[j + 1]) {
+                    int tmp = sortMe[j];
+                    sortMe[j] = sortMe[j + 1];
+                    sortMe[j + 1] = tmp;
+                    numberOfSwaps++;
+                }
+            }
+
+            // If no elements were swapped during a traversal, array is sorted
+            if (numberOfSwaps == 0) {
+                break;
+            }
+        }
+
+    }
 
     /**
      * Sorts integer array in descending order
@@ -77,7 +105,33 @@ public class mintArrays {
                 break;
             }
         }
+    }
+    
+    /**
+     * Sorts integer object array in descending order
+     *
+     * @param sortMe integer array to be sorted
+     */
+    public static void sortD(Integer[] sortMe) {
+        for (int i = 0; i < sortMe.length; i++) {
+            // Track number of elements swapped during a single array traversal
+            int numberOfSwaps = 0;
 
+            for (int j = 0; j < sortMe.length - 1; j++) {
+                // Swap adjacent elements if they are in ascending order
+                if (sortMe[j] < sortMe[j + 1]) {
+                    int tmp = sortMe[j];
+                    sortMe[j] = sortMe[j + 1];
+                    sortMe[j + 1] = tmp;
+                    numberOfSwaps++;
+                }
+            }
+
+            // If no elements were swapped during a traversal, array is sorted
+            if (numberOfSwaps == 0) {
+                break;
+            }
+        }
     }
     
     /**
@@ -93,6 +147,33 @@ public class mintArrays {
             for (int j = 0; j < sortMe.length - 1; j++) {
                 // Swap adjacent elements if they are in decreasing order
                 if (sortMe[j].compareToIgnoreCase(sortMe[j + 1]) >= 1) {
+                    String tmp = sortMe[j];
+                    sortMe[j] = sortMe[j + 1];
+                    sortMe[j + 1] = tmp;
+                    numberOfSwaps++;
+                }
+            }
+
+            // If no elements were swapped during a traversal, array is sorted
+            if (numberOfSwaps == 0) {
+                break;
+            }
+        }
+    }
+    
+    /**
+     * Sorts String array in descending alphabetical order (case-insensitive) using bubblesort
+     * 
+     * @param sortMe String object array to be sorted
+     */
+    public static void sortD(String[] sortMe) {
+        for (int i = 0; i < sortMe.length; i++) {
+            // Track number of elements swapped during a single array traversal
+            int numberOfSwaps = 0;
+
+            for (int j = 0; j < sortMe.length - 1; j++) {
+                // Swap adjacent elements if they are in increasing order
+                if (sortMe[j].compareToIgnoreCase(sortMe[j + 1]) <= 1) {
                     String tmp = sortMe[j];
                     sortMe[j] = sortMe[j + 1];
                     sortMe[j + 1] = tmp;
@@ -305,7 +386,7 @@ public class mintArrays {
     }
     
     /**
-     * toString returns a formal representation of the <code>array</code> in a string
+     * toString returns the formal representation of the <code>array</code> in a string
      * 
      * @param array input array to be toString
      * @return String
