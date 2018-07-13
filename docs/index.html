@@ -40,7 +40,7 @@
 						<li class="nav-item"><a class="nav-link" href="#sortStr">Sort (String)</a></li>
 						<li class="nav-item"><a class="nav-link" href="#sortDStr">SortD (String)</a></li>
 						<li class="nav-item"><a class="nav-link" href="#first">First</a></li>
-						<li class="nav-item"><a class="nav-link" href="#firstn">First</a></li>
+						<li class="nav-item"><a class="nav-link" href="#initial">Initial</a></li>
 				  	</ul></li>
 				  	<!--<li class="nav-item"><a class="nav-link" href="#strings">Strings</a><ul class="nav ml-3">
 						<li class="nav-item"><a class="nav-link" href="#g">Coming Soon</a></li>
@@ -175,12 +175,28 @@
 				mintMe.first(myArray);</code></pre>
 				</p><hr>
 
-				<h4 id="firstn"><strong>First</strong> <small class="text-muted"><code>first(E[] array, int n)</code></small></h4>
+				<h4><strong>First</strong> <small class="text-muted"><code>first(E[] array, int n)</code></small></h4>
 				<p>First method returns the first <code>n</code> elements of the given <code>array</code> belonging to any <code>Object</code> datatype in the form of array.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
 				mintMe.first(myArray, 3);</code></pre>
-				</p><hr>	
+				</p><hr>
+
+				<h4 id="initial"><strong>Initial</strong> <small class="text-muted"><code>initial(E[] array)</code></small></h4>
+				<p>Initial returns everything but not the last element of the <code>array</code>.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
+				mintMe.initial(myArray);</code></pre>
+				</p><hr>
+
+				<h4><strong>Initial</strong> <small class="text-muted"><code>initial(E[] array, int n)</code></small></h4>
+				<p>Initial returns everything but not the <code>n</code> last elements.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
+				mintMe.initial(myArray, 3);</code></pre>
+
+	
+				</p><hr>
 			</div>
 
 			<!--<div class="mt-4">

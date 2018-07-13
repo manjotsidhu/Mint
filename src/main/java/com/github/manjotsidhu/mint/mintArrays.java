@@ -81,7 +81,7 @@ public class mintArrays {
     }
     
     /**
-     * Sorts String array in alphabetical order (case-insensitive)
+     * Sorts String array in alphabetical order (case-insensitive) using bubblesort
      * 
      * @param sortMe String object array to be sorted
      */
@@ -154,7 +154,7 @@ public class mintArrays {
     /**
      * First returns the first element of the given array
      * 
-     * @param <E> Generics datatype E belonging to array object
+     * @param <E> Generic datatype E belonging to array object
      * @param array input argument
      * @return single first element of E datatype
      */
@@ -165,7 +165,7 @@ public class mintArrays {
     /**
      * returns first <code>n</code> elements from the <code>array</code>
      * 
-     * @param <E> Generics Datatype
+     * @param <E> Generic Datatype
      * @param array input array as argument
      * @param n number of first elements to return
      * @return <code>E[]</code> array having first <code>n</code> elements
@@ -174,6 +174,35 @@ public class mintArrays {
         Object[] newArr = new Object[n];
  
         System.arraycopy(array, 0, newArr, 0, n);       
+        return (E[]) newArr;
+    }
+    
+    /**
+     * Initial returns everything but not the last element of the <code>array</code>
+     * 
+     * @param <E> Generic Datatype of arrays
+     * @param array input argument
+     * @return new array not having the last element
+     */
+    public static <E> E[] initial(E[] array) {
+        Object[] newArr = new Object[array.length-1];
+        
+        System.arraycopy(array, 0, newArr, 0, array.length-1);
+        return (E[]) newArr;
+    }
+    
+    /**
+     * Initial returns everything but not the <code>n</code> last elements
+     * 
+     * @param <E> Generic Datatype of arrays
+     * @param array input argument
+     * @param n number of elements to leave from the last
+     * @return new array not having last <code>n</code> elements
+     */
+    public static <E> E[] initial(E[] array, int n) {
+        Object[] newArr = new Object[array.length-n];
+        
+        System.arraycopy(array, 0, newArr, 0, array.length-n);
         return (E[]) newArr;
     }
 }
