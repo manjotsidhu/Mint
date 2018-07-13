@@ -231,4 +231,36 @@ public class mintArrays {
         System.arraycopy(array, array.length-n, newArr, 0, n);       
         return (E[]) newArr;
     }
+    
+    /**
+     * Resizes the given <code>array</code> as argument and returns a new array of length <code>n</code>
+     * 
+     * @param <E> Generic datatype element
+     * @param array input array to be resized as argument
+     * @param n new length of array to resize
+     * @return resized array of datatype <code>E[]</code>
+     */
+    public static <E> E[] resize(E[] array, int n) {
+        Object[] newArr = new Object[n];        
+        
+        System.arraycopy(array, 0, newArr, 0, n);
+        return (E[]) newArr;
+    }
+    
+    /**
+     * Drops the specified element at <code>index</code> and returns the rest of the array
+     * 
+     * @param <E> Generic datatype element
+     * @param array input array as argument
+     * @param index index of the array to be dropped
+     * @return new array after dropping the specified index
+     */
+    public static <E> E[] drop(E[] array, int index) {
+        Object[] newArr = new Object[array.length-1];
+        
+        System.arraycopy(array, 0, newArr, 0, index);
+        System.arraycopy(array, index+1, newArr, index, array.length-index-1);
+        
+        return (E[]) newArr;
+    }
 }

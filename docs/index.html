@@ -28,9 +28,11 @@
 					<li class="nav-item"><a class="nav-link" href="#download">Downloads</a></li>
 					<li class="nav-item"><a class="nav-link" href="#mintmaven">Using Mint with Maven</a></li>
 					<li class="nav-item"><a class="nav-link" href="#arrays">Arrays</a><ul class="nav ml-3">
+						<li class="nav-item"><a class="nav-link" href="#drop">Drop</a></li>
 						<li class="nav-item"><a class="nav-link" href="#first">First</a></li>
 						<li class="nav-item"><a class="nav-link" href="#initial">Initial</a></li>
 						<li class="nav-item"><a class="nav-link" href="#last">Last</a></li>
+						<li class="nav-item"><a class="nav-link" href="#resize">Resize</a></li>
 						<li class="nav-item"><a class="nav-link" href="#reverse">Reverse</a></li>
 						<li class="nav-item"><a class="nav-link" href="#sortInt">Sort (Integer)</a></li>
 						<li class="nav-item"><a class="nav-link" href="#sortDInt">SortD (Integer)</a></li>
@@ -100,7 +102,14 @@
 			<div class="mt-4">
 				<h3 id="arrays">Arrays <small class="text-muted"><code>com.github.manjotsidhu.mint.mintArrays</code></small></h3>
 				<p>Inorder to use <code>mintArrays</code>, Create an object of the class by:</p>
-				<samp>mintArrays mintMe = new mintArrays();</samp><hr>		
+				<samp>mintArrays mintMe = new mintArrays();</samp><hr>
+				
+				<h4 id="drop"><strong>Drop</strong> <small class="text-muted"><code>drop(E[] array, int index)</code></small></h4>
+				<p>Drops the specified element at <code>index</code> and returns the rest of the array.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				Integer[] myArray = {38, 64, 33, 41, 12, 60};
+				mintMe.drop(myArray, 2);</code></pre>
+				</p><hr>
 			
 				<h4 id="first"><strong>First</strong> <small class="text-muted"><code>first(E[] array)</code></small></h4>
 				<p>First method returns the first element of the given <code>array</code>.<br>
@@ -140,8 +149,15 @@
 				<h4><strong>Last</strong> <small class="text-muted"><code>initial(E[] array, int n)</code></small></h4>
 				<p>Initial returns everything but not the <code>n</code> last elements.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				Integer[] myArray = {9, 92, 50, 37, 45, 54, 38, 83, 2};
-				mintMe.last(myArray, 3);</code></pre>	
+				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
+				mintMe.initial(myArray, 3);</code></pre>	
+				</p><hr>
+
+				<h4 id="resize"><strong>Resize</strong> <small class="text-muted"><code>resize(E[] array, int n)</code></small></h4>
+				<p>Resizes the given <code>array</code> as argument and returns a new array of length <code>n</code>.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				Integer[] myArray = {2, 3, 74, 37};
+				mintMe.resize(myArray, 2);</code></pre>
 				</p><hr>
 				
 				<h4 id="reverse"><strong>Reverse</strong> <small class="text-muted"><code>reverse(E[] arr)</code></small></h4>
