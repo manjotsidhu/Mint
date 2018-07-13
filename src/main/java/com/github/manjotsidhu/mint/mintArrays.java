@@ -180,7 +180,7 @@ public class mintArrays {
     /**
      * Initial returns everything but not the last element of the <code>array</code>
      * 
-     * @param <E> Generic Datatype of arrays
+     * @param <E> Generic Datatype Element
      * @param array input argument
      * @return new array not having the last element
      */
@@ -194,7 +194,7 @@ public class mintArrays {
     /**
      * Initial returns everything but not the <code>n</code> last elements
      * 
-     * @param <E> Generic Datatype of arrays
+     * @param <E> Generic Datatype Element
      * @param array input argument
      * @param n number of elements to leave from the last
      * @return new array not having last <code>n</code> elements
@@ -203,6 +203,32 @@ public class mintArrays {
         Object[] newArr = new Object[array.length-n];
         
         System.arraycopy(array, 0, newArr, 0, array.length-n);
+        return (E[]) newArr;
+    }
+    
+    /**
+     * Last returns the last element of the array
+     * 
+     * @param <E> Generic Datatype Element
+     * @param array input array as argument
+     * @return last element of array as <code>E</code> datatype
+     */
+    public static <E> E last(E[] array) {
+        return array[array.length-1];
+    }
+    
+    /**
+     * Last returns last <code>n</code> element(s) of the array
+     * 
+     * @param <E> Generic Datatype Element
+     * @param array input array as argument
+     * @param n number of elements to return from the last of array
+     * @return last element of array as <code>E</code> datatype
+     */
+    public static <E> E[] last(E[] array, int n) {
+        Object[] newArr = new Object[n];
+ 
+        System.arraycopy(array, array.length-n, newArr, 0, n);       
         return (E[]) newArr;
     }
 }
