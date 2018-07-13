@@ -178,6 +178,18 @@ public class mintArrays {
     }
     
     /**
+     * isFirst checks if the specified <code>element</code> is the first element of <code>array</code> or not
+     * 
+     * @param <E> Generic Datatype
+     * @param array input array as argument
+     * @param element element to check if its first
+     * @return true or false if isFirst or not
+     */
+    public static <E> boolean isFirst(E[] array, E element) {
+        return first(array) == element;
+    }
+    
+    /**
      * Initial returns everything but not the last element of the <code>array</code>
      * 
      * @param <E> Generic Datatype Element
@@ -233,6 +245,18 @@ public class mintArrays {
     }
     
     /**
+     * isLast checks if the specified <code>element</code> is the last element of <code>array</code> or not
+     * 
+     * @param <E> Generic Datatype
+     * @param array input array as argument
+     * @param element element to check if its last
+     * @return true or false if isLast or not
+     */
+    public static <E> boolean isLast(E[] array, E element) {
+        return last(array) == element;
+    }
+    
+    /**
      * Resizes the given <code>array</code> as argument and returns a new array of length <code>n</code>
      * 
      * @param <E> Generic datatype element
@@ -278,5 +302,22 @@ public class mintArrays {
             if(array[index] == element) return index;
         }
         return -1;
+    }
+    
+    /**
+     * toString returns a formal representation of the <code>array</code> in a string
+     * 
+     * @param array input array to be toString
+     * @return String
+     */
+    public static <E> String toString(E[] array) {
+        String toStr = "[";
+        
+        for(E element : array) {
+            toStr += element;
+            toStr += (!isLast(array, element)) ? ", " : "";
+        }
+        toStr += "]";
+        return toStr;
     }
 }

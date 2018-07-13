@@ -32,6 +32,8 @@
 						<li class="nav-item"><a class="nav-link" href="#find">Find</a></li>
 						<li class="nav-item"><a class="nav-link" href="#first">First</a></li>
 						<li class="nav-item"><a class="nav-link" href="#initial">Initial</a></li>
+						<li class="nav-item"><a class="nav-link" href="#isFirst">IsFirst</a></li>
+						<li class="nav-item"><a class="nav-link" href="#isLast">IsLast</a></li>
 						<li class="nav-item"><a class="nav-link" href="#last">Last</a></li>
 						<li class="nav-item"><a class="nav-link" href="#resize">Resize</a></li>
 						<li class="nav-item"><a class="nav-link" href="#reverse">Reverse</a></li>
@@ -39,6 +41,7 @@
 						<li class="nav-item"><a class="nav-link" href="#sortDInt">SortD (Integer)</a></li>
 						<li class="nav-item"><a class="nav-link" href="#sortStr">Sort (String)</a></li>
 						<li class="nav-item"><a class="nav-link" href="#sortDStr">SortD (String)</a></li>
+						<li class="nav-item"><a class="nav-link" href="#toString">ToString</a></li>
 				  	</ul></li>
 				  	<li class="nav-item"><a class="nav-link" href="#numbers">Numbers</a><ul class="nav ml-3">
 						<li class="nav-item"><a class="nav-link" href="#ceil">Ceil</a></li>
@@ -148,6 +151,20 @@
 				mintMe.initial(myArray, 3);</code></pre>	
 				</p><hr>
 
+				<h4 id="isfirst"><strong>IsFirst</strong> <small class="text-muted"><code>isFirst(E[] array, E element)</code></small></h4>
+				<p>isFirst checks if the specified <code>element</code> is the first element of <code>array</code> or not.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				Integer[] myArray = {37, 62, 37, 27, 77, 27, 39, 93};
+				mintMe.isFirst(myArray, 39);</code></pre>
+				</p><hr>
+
+				<h4 id="islast"><strong>IsLast</strong> <small class="text-muted"><code>isLast(E[] array, E element)</code></small></h4>
+				<p>isLast checks if the specified <code>element</code> is the last element of <code>array</code> or not.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				Integer[] myArray = {37, 62, 37, 27, 77, 27, 39, 93};
+				mintMe.isLast(myArray, 39);</code></pre>
+				</p><hr>
+
 				<h4 id="last"><strong>Last</strong> <small class="text-muted"><code>last(E[] array)</code></small></h4>
 				<p>Last returns the lest element of the <code>array</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
@@ -181,8 +198,12 @@
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				int[] myArray = {6, 4, 2, 1, 3, 5, 8, 1, 99, 1222};
 				mintMe.sort(myArray);</code></pre>
+				</p><hr><h4 id="sortDStr"><strong>SortD</strong> <small class="text-muted"><code>sortD(String[] arr)</code></small></h4>
+				<p>Sorts Array <code>arr</code> of only <code>String[]</code> datatype in descending order.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
+				mintMe.sort(myArray);</code></pre>
 				</p><hr>
-
 				<h4 id="sortDInt"><strong>SortD</strong> <small class="text-muted"><code>sortD(int[] arr)</code></small></h4>
 				<p>Sorts Array <code>arr</code> of only <code>int[]</code> datatype in descending order.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
@@ -202,6 +223,20 @@
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
 				mintMe.sort(myArray);</code></pre>
+				</p><hr>
+
+				<h4 id="sortDStr"><strong>SortD</strong> <small class="text-muted"><code>sortD(String[] arr)</code></small></h4>
+				<p>Sorts Array <code>arr</code> of only <code>String[]</code> datatype in descending order.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
+				mintMe.sort(myArray);</code></pre>
+				</p><hr>
+
+				<h4 id="toString"><strong>toString</strong> <small class="text-muted"><code>toString(E[] array)</code></small></h4>
+				<p>toString returns a formal representation of the <code>array</code> in a string.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				Integer[] myArray = {56, 53, 53, 96, 27};
+				mintMe.toString(myArray);</code></pre>
 				</p><hr>
 				</div>
 
