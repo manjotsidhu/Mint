@@ -29,6 +29,7 @@
 					<li class="nav-item"><a class="nav-link" href="#mintmaven">Using Mint with Maven</a></li>
 					<li class="nav-item"><a class="nav-link" href="#arrays">Arrays</a><ul class="nav ml-3">
 						<li class="nav-item"><a class="nav-link" href="#drop">Drop</a></li>
+						<li class="nav-item"><a class="nav-link" href="#find">Find</a></li>
 						<li class="nav-item"><a class="nav-link" href="#first">First</a></li>
 						<li class="nav-item"><a class="nav-link" href="#initial">Initial</a></li>
 						<li class="nav-item"><a class="nav-link" href="#last">Last</a></li>
@@ -109,6 +110,14 @@
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {38, 64, 33, 41, 12, 60};
 				mintMe.drop(myArray, 2);</code></pre>
+				</p><hr>
+		
+				<h4 id="find"><strong>Find</strong> <small class="text-muted"><code>find(E[] array, E element)</code></small></h4>
+				<p>Finds first occurance of the given <code>element</code> and returns the index of the found element.<br>
+				If nothing found then returns <code>-1</code>.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				Integer[] myArray = {3, 7, 9, 5, 7, 5, 1, 0, 7};
+				mintMe.first(myArray);</code></pre>
 				</p><hr>
 			
 				<h4 id="first"><strong>First</strong> <small class="text-muted"><code>first(E[] array)</code></small></h4>

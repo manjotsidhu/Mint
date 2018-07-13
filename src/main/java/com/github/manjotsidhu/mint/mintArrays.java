@@ -263,4 +263,20 @@ public class mintArrays {
         
         return (E[]) newArr;
     }
+    
+    /**
+     * Finds first occurance of the given <code>element</code> and returns the index of the found element
+     * If nothing found then returns -1
+     * 
+     * @param <E> Generic datatype element
+     * @param array input array to search in
+     * @param element element to find
+     * @return index of the element found if no matches found then return -1
+     */
+    public static <E> int find(E[] array, E element) {
+        for(int index = 0; index < array.length; index++) {
+            if(array[index] == element) return index;
+        }
+        return -1;
+    }
 }
