@@ -41,20 +41,39 @@ public class mintNumbers {
             return y;
         }
     }
-    
+
     /**
      * Floor finds the greatest integer less than or equal to that number
-     * 
+     *
      * @param <E> Generic datatype belonging to numbers
      * @param number the number to be floor-ed
      * @return greatest integer belonging to <code>int</code>
      */
     public static < E extends Number> int floor(E number) {
-        if(number.intValue() == number.doubleValue()) {
+        if (number.intValue() == number.doubleValue()) {
             return number.intValue();
         } else {
-            if(number.intValue() > number.doubleValue()) {
+            if (number.intValue() > number.doubleValue()) {
                 return number.intValue() - 1;
+            } else {
+                return number.intValue();
+            }
+        }
+    }
+
+    /**
+     * Ceil finds the least integer greater than or equal to that number
+     *
+     * @param <E> Generic datatype belonging to numbers
+     * @param number the number to be find the ceil of
+     * @return least integer belonging to <code>int</code> datatype
+     */
+    public static < E extends Number> int ceil(E number) {
+        if (number.intValue() == number.doubleValue()) {
+            return number.intValue();
+        } else {
+            if (number.intValue() < number.doubleValue()) {
+                return number.intValue() + 1;
             } else {
                 return number.intValue();
             }
@@ -62,21 +81,12 @@ public class mintNumbers {
     }
     
     /**
-     * Ceil finds the least integer greater than or equal to that number
+     * RandomInt generates random integer in the range of 0-<code>n</code> numbers.
      * 
-     * @param <E> Generic datatype belonging to numbers
-     * @param number the number to be find the ceil of
-     * @return least integer belonging to <code>int</code> datatype
+     * @param n Integer argument
+     * @return Returns randomly generated integer
      */
-    public static < E extends Number> int ceil(E number) {
-       if(number.intValue() == number.doubleValue()) {
-            return number.intValue();
-        } else {
-            if(number.intValue() < number.doubleValue()) {
-                return number.intValue() + 1;
-            } else {
-                return number.intValue();
-            }
-        }
+    public static int randomInt(int n) {
+        return (int) (Math.random()*n);
     }
 }

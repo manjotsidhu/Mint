@@ -9,25 +9,25 @@ package com.github.manjotsidhu.mint;
  * @author ManjotSidhu
  */
 public class mintArrays {
-    
+
     /**
      * Reverses array of any data type
-     * 
+     *
      * @param <E> Generic datatype belonging to arrays
-     * @param ar array to be reversed
+     * @param ar Returns Array to be reversed
      */
-    public static < E > void reverse(E[] ar) {
-        for(int i = 0; i < mintNumbers.floor(ar.length/2); i++) {
-           E temp = ar[i];
-           ar[i] = ar[ar.length - 1 - i];
-           ar[ar.length - 1 - i] = temp;
+    public static < E> void reverse(E[] ar) {
+        for (int i = 0; i < mintNumbers.floor(ar.length / 2); i++) {
+            E temp = ar[i];
+            ar[i] = ar[ar.length - 1 - i];
+            ar[ar.length - 1 - i] = temp;
         }
     }
 
     /**
      * Sorts integer array in ascending order
      *
-     * @param sortMe integer array to be sorted
+     * @param sortMe Integer array to be sorted
      */
     public static void sort(int[] sortMe) {
         for (int i = 0; i < sortMe.length; i++) {
@@ -51,11 +51,11 @@ public class mintArrays {
         }
 
     }
-    
+
     /**
      * Sorts integer object array in ascending order
      *
-     * @param sortMe integer array to be sorted
+     * @param sortMe Integer array to be sorted
      */
     public static void sort(Integer[] sortMe) {
         for (int i = 0; i < sortMe.length; i++) {
@@ -83,7 +83,7 @@ public class mintArrays {
     /**
      * Sorts integer array in descending order
      *
-     * @param sortMe integer array to be sorted
+     * @param sortMe Integer array to be sorted
      */
     public static void sortD(int[] sortMe) {
         for (int i = 0; i < sortMe.length; i++) {
@@ -106,11 +106,11 @@ public class mintArrays {
             }
         }
     }
-    
+
     /**
      * Sorts integer object array in descending order
      *
-     * @param sortMe integer array to be sorted
+     * @param sortMe Integer object array to be sorted
      */
     public static void sortD(Integer[] sortMe) {
         for (int i = 0; i < sortMe.length; i++) {
@@ -133,10 +133,11 @@ public class mintArrays {
             }
         }
     }
-    
+
     /**
-     * Sorts String array in alphabetical order (case-insensitive) using bubblesort
-     * 
+     * Sorts String array in alphabetical order (case-insensitive) using
+     * bubblesort
+     *
      * @param sortMe String object array to be sorted
      */
     public static void sort(String[] sortMe) {
@@ -160,10 +161,11 @@ public class mintArrays {
             }
         }
     }
-    
+
     /**
-     * Sorts String array in descending alphabetical order (case-insensitive) using bubblesort
-     * 
+     * Sorts String array in descending alphabetical order (case-insensitive)
+     * using bubblesort
+     *
      * @param sortMe String object array to be sorted
      */
     public static void sortD(String[] sortMe) {
@@ -187,15 +189,14 @@ public class mintArrays {
             }
         }
     }
-    
+
     /**
      * Compares two arrays
-     *
      *
      * @param <E> Datatype E Array Object
      * @param array1 First Array Object
      * @param array2 Second Array Object
-     * @return boolean result
+     * @return Returns boolean result
      */
     public static < E extends Comparable> boolean compare(E[] array1, E[] array2) {
         if (array1.length == array2.length) {
@@ -213,11 +214,10 @@ public class mintArrays {
     /**
      * Compares two arrays element wise
      *
-     *
      * @param <E> Dataype E Array Object
      * @param array1 First Array Object
      * @param array2 Second Array Object
-     * @return boolean array after comparing
+     * @return Returns boolean array after comparing
      */
     public static <E> boolean[] compareE(E[] array1, E[] array2) {
         boolean[] result = new boolean[mintNumbers.max(array1.length, array2.length)];
@@ -231,174 +231,232 @@ public class mintArrays {
         }
         return result;
     }
-    
+
     /**
      * First returns the first element of the given array
-     * 
+     *
      * @param <E> Generic datatype E belonging to array object
-     * @param array input argument
-     * @return single first element of E datatype
+     * @param array Input argument
+     * @return Returns single first element of E datatype
      */
     public static <E> E first(E[] array) {
         return array[0];
     }
-    
+
     /**
-     * returns first <code>n</code> elements from the <code>array</code>
-     * 
+     * Returns first <code>n</code> elements from the <code>array</code>
+     *
      * @param <E> Generic Datatype
-     * @param array input array as argument
-     * @param n number of first elements to return
-     * @return <code>E[]</code> array having first <code>n</code> elements
+     * @param array Input array as argument
+     * @param n Number of first elements to return
+     * @return Returns <code>E[]</code> array having first <code>n</code> elements
      */
     public static <E> E[] first(E[] array, int n) {
         Object[] newArr = new Object[n];
- 
-        System.arraycopy(array, 0, newArr, 0, n);       
+
+        System.arraycopy(array, 0, newArr, 0, n);
         return (E[]) newArr;
     }
-    
+
     /**
-     * isFirst checks if the specified <code>element</code> is the first element of <code>array</code> or not
-     * 
+     * isFirst checks if the specified <code>element</code> is the first element
+     * of <code>array</code> or not
+     *
      * @param <E> Generic Datatype
-     * @param array input array as argument
-     * @param element element to check if its first
-     * @return true or false if isFirst or not
+     * @param array Input array as argument
+     * @param element Element to check if its first
+     * @return Returns true or false if isFirst or not
      */
     public static <E> boolean isFirst(E[] array, E element) {
         return first(array) == element;
     }
-    
+
     /**
-     * Initial returns everything but not the last element of the <code>array</code>
-     * 
+     * Initial returns everything but not the last element of the
+     * <code>array</code>
+     *
      * @param <E> Generic Datatype Element
-     * @param array input argument
-     * @return new array not having the last element
+     * @param array Input argument
+     * @return Returns new array not having the last element
      */
     public static <E> E[] initial(E[] array) {
-        Object[] newArr = new Object[array.length-1];
-        
-        System.arraycopy(array, 0, newArr, 0, array.length-1);
+        Object[] newArr = new Object[array.length - 1];
+
+        System.arraycopy(array, 0, newArr, 0, array.length - 1);
         return (E[]) newArr;
     }
-    
+
     /**
      * Initial returns everything but not the <code>n</code> last elements
-     * 
+     *
      * @param <E> Generic Datatype Element
-     * @param array input argument
-     * @param n number of elements to leave from the last
-     * @return new array not having last <code>n</code> elements
+     * @param array Input argument
+     * @param n Number of elements to leave from the last
+     * @return Returns new array not having last <code>n</code> elements
      */
     public static <E> E[] initial(E[] array, int n) {
-        Object[] newArr = new Object[array.length-n];
-        
-        System.arraycopy(array, 0, newArr, 0, array.length-n);
+        Object[] newArr = new Object[array.length - n];
+
+        System.arraycopy(array, 0, newArr, 0, array.length - n);
         return (E[]) newArr;
     }
-    
+
     /**
      * Last returns the last element of the array
-     * 
+     *
      * @param <E> Generic Datatype Element
-     * @param array input array as argument
-     * @return last element of array as <code>E</code> datatype
+     * @param array Input array as argument
+     * @return Returns last element of array as <code>E</code> datatype
      */
     public static <E> E last(E[] array) {
-        return array[array.length-1];
+        return array[array.length - 1];
     }
-    
+
     /**
      * Last returns last <code>n</code> element(s) of the array
-     * 
+     *
      * @param <E> Generic Datatype Element
-     * @param array input array as argument
-     * @param n number of elements to return from the last of array
-     * @return last element of array as <code>E</code> datatype
+     * @param array Input array as argument
+     * @param n Number of elements to return from the last of array
+     * @return Returns last element of array as <code>E</code> datatype
      */
     public static <E> E[] last(E[] array, int n) {
         Object[] newArr = new Object[n];
- 
-        System.arraycopy(array, array.length-n, newArr, 0, n);       
+
+        System.arraycopy(array, array.length - n, newArr, 0, n);
         return (E[]) newArr;
     }
-    
+
     /**
-     * isLast checks if the specified <code>element</code> is the last element of <code>array</code> or not
-     * 
+     * isLast checks if the specified <code>element</code> is the last element
+     * of <code>array</code> or not
+     *
      * @param <E> Generic Datatype
-     * @param array input array as argument
-     * @param element element to check if its last
-     * @return true or false if isLast or not
+     * @param array Input array as argument
+     * @param element Element to check if its last
+     * @return Returns true or false if isLast or not
      */
     public static <E> boolean isLast(E[] array, E element) {
         return last(array) == element;
     }
-    
+
     /**
-     * Resizes the given <code>array</code> as argument and returns a new array of length <code>n</code>
-     * 
+     * Resizes the given <code>array</code> as argument and returns a new array
+     * of length <code>n</code>
+     *
      * @param <E> Generic datatype element
-     * @param array input array to be resized as argument
-     * @param n new length of array to resize
-     * @return resized array of datatype <code>E[]</code>
+     * @param array Input array to be resized as argument
+     * @param n New length of array to resize
+     * @return Returns resized array of datatype <code>E[]</code>
      */
     public static <E> E[] resize(E[] array, int n) {
-        Object[] newArr = new Object[n];        
-        
+        Object[] newArr = new Object[n];
+
         System.arraycopy(array, 0, newArr, 0, n);
         return (E[]) newArr;
     }
-    
+
     /**
-     * Drops the specified element at <code>index</code> and returns the rest of the array
-     * 
+     * Drops the specified element at <code>index</code> and returns the rest of
+     * the array
+     *
      * @param <E> Generic datatype element
-     * @param array input array as argument
-     * @param index index of the array to be dropped
-     * @return new array after dropping the specified index
+     * @param array Input array as argument
+     * @param index Index of the array to be dropped
+     * @return Returns New array after dropping the specified index
      */
     public static <E> E[] drop(E[] array, int index) {
-        Object[] newArr = new Object[array.length-1];
-        
+        Object[] newArr = new Object[array.length - 1];
+
         System.arraycopy(array, 0, newArr, 0, index);
-        System.arraycopy(array, index+1, newArr, index, array.length-index-1);
-        
+        System.arraycopy(array, index + 1, newArr, index, array.length - index - 1);
+
         return (E[]) newArr;
     }
-    
+
     /**
-     * Finds first occurance of the given <code>element</code> and returns the index of the found element
-     * If nothing found then returns -1
-     * 
+     * Finds first occurance of the given <code>element</code> and returns the
+     * index of the found element If nothing found then returns -1
+     *
      * @param <E> Generic datatype element
-     * @param array input array to search in
-     * @param element element to find
-     * @return index of the element found if no matches found then return -1
+     * @param array Input array to search in
+     * @param element Element to find
+     * @return Returns index of the element found if no matches found then return -1
      */
     public static <E> int find(E[] array, E element) {
-        for(int index = 0; index < array.length; index++) {
-            if(array[index] == element) return index;
+            for (int index = 0; index < array.length; index++) {
+                if (array[index] == element) {
+                    return index;
+                }
         }
+
         return -1;
     }
-    
+
     /**
-     * toString returns the formal representation of the <code>array</code> in a string
-     * 
-     * @param array input array to be toString
-     * @return String
+     * ToString returns the formal representation of the <code>array</code> in a
+     * string
+     *
+     * @param array Input array to be toString
+     * @return Returns String
      */
     public static <E> String toString(E[] array) {
         String toStr = "[";
-        
-        for(E element : array) {
+
+        for (E element : array) {
             toStr += element;
             toStr += (!isLast(array, element)) ? ", " : "";
         }
         toStr += "]";
         return toStr;
     }
+
+    /**
+     * Checks if <code>array</code> contains the given <code>element</code>
+     * 
+     * @param array Input array as argument
+     * @param element Element to be checked in array
+     * @return Returns true if it contains else false
+     */
+    public static <E> boolean contains(E[] array, E element) {
+        
+        if(find(array, element) != -1)  {
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * Generates random integer array of length less than 10 and numbers less
+     * than 100
+     * 
+     * @return Returns randomly generated Integer object array
+     */
+    public static Integer[] randomIntArray() {
+        Integer[] arr = new Integer[mintNumbers.randomInt(10)];
+        
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = mintNumbers.randomInt(100);
+        }
+        
+        return arr;
+    }
+    
+    /**
+     * Generates random integer array of length less than <code>n</code> and numbers less than <code>m</code> 
+     * 
+     * @param n Parameter belonging to int datatype
+     * @param m Parameter belonging to int datatype
+     * @return Returns randomly generated Integer object array
+     */
+    public static Integer[] randomIntArray(int n, int m) {
+        Integer[] arr = new Integer[mintNumbers.randomInt(n)];
+        
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = mintNumbers.randomInt(m);
+        }
+        
+        return arr;
+    }
+    
 }
