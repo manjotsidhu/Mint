@@ -11,35 +11,27 @@ package com.github.manjotsidhu.mint;
 public class mintNumbers {
 
     /**
-     * Computes Min of 2 numbers
+     * Computes Min of all passed numbers as arguments
      *
      * @param <T> Type T object
-     * @param x First number
-     * @param y Second number
-     * @return min between x and y
+     * @param x Arguments that can be more than one
+     * @return Returns minimum of all passed arguments
      */
-    public static < T extends Number> T min(T x, T y) {
-        if (x.doubleValue() < y.doubleValue()) {
-            return x;
-        } else {
-            return y;
-        }
+    public static < T extends Number> T min(T ...x) {
+        mintArrays.sort(x);
+        return x[0];
     }
 
     /**
-     * Computes Max of 2 numbers
+     * Computes Max of all passed numbers as arguments
      *
      * @param <T> Type T object
-     * @param x First number
-     * @param y Second number
-     * @return max between x and y
+     * @param x Arguments that can be more than one
+     * @return Returns maximum of all passed arguments
      */
-    public static < T extends Number> T max(T x, T y) {
-        if (x.doubleValue() > y.doubleValue()) {
-            return x;
-        } else {
-            return y;
-        }
+    public static < T extends Number> T max(T ...x) {
+        mintArrays.sort(x);
+        return x[x.length-1];
     }
 
     /**

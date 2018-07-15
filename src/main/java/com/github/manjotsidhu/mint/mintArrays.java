@@ -53,19 +53,47 @@ public class mintArrays {
     }
 
     /**
-     * Sorts integer object array in ascending order
+     * Sorts Generic number object array in ascending order
      *
-     * @param sortMe Integer array to be sorted
+     * @param sortMe Numeric array to be sorted
      */
-    public static void sort(Integer[] sortMe) {
+    public static <E extends Number> void sort(E[] sortMe) {
         for (int i = 0; i < sortMe.length; i++) {
             // Track number of elements swapped during a single array traversal
             int numberOfSwaps = 0;
 
             for (int j = 0; j < sortMe.length - 1; j++) {
                 // Swap adjacent elements if they are in decreasing order
-                if (sortMe[j] > sortMe[j + 1]) {
-                    int tmp = sortMe[j];
+                if (sortMe[j].doubleValue() > sortMe[j + 1].doubleValue()) {
+                    E tmp = sortMe[j];
+                    sortMe[j] = sortMe[j + 1];
+                    sortMe[j + 1] = tmp;
+                    numberOfSwaps++;
+                }
+            }
+
+            // If no elements were swapped during a traversal, array is sorted
+            if (numberOfSwaps == 0) {
+                break;
+            }
+        }
+
+    }
+    
+    /**
+     * Sorts Generic number object array in descending order
+     *
+     * @param sortMe Numeric array to be sorted
+     */
+    public static <E extends Number> void sortD(E[] sortMe) {
+        for (int i = 0; i < sortMe.length; i++) {
+            // Track number of elements swapped during a single array traversal
+            int numberOfSwaps = 0;
+
+            for (int j = 0; j < sortMe.length - 1; j++) {
+                // Swap adjacent elements if they are in increasing order
+                if (sortMe[j].doubleValue() < sortMe[j + 1].doubleValue()) {
+                    E tmp = sortMe[j];
                     sortMe[j] = sortMe[j + 1];
                     sortMe[j + 1] = tmp;
                     numberOfSwaps++;
