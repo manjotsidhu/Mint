@@ -16,14 +16,14 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body data-spy="scroll" data-target="#scrollspy" data-offset="0" >
+<body data-spy="scroll" data-target="#scrollspy" data-offset="1" >
 
     <!-- Start your project here-->
 	<div class = "container">
 	<div class = "row">
-		<div class = "nav navbar-fixed-top col-1 col-md-2 pt-3">
-			<div id="scrollspy" class=" ">
-			  <ul id="scrollspy" class="sticky sticky-top  nav nav-pills default-pills smooth-scroll" data-allow-hashes="true">
+		<div class = "sticky nav navbar-fixed-top col-1 col-md-2 pt-3">
+			<div id="" class="">
+			  <ul id="scrollspy" class="sticky sticky-top nav nav-pills default-pills smooth-scroll" data-allow-hashes="true">
 					<li class="nav-item"><a class="nav-link" href="#introduction">Introduction</a></li> 
 					<li class="nav-item"><a class="nav-link" href="#download">Downloads</a></li>
 					<li class="nav-item"><a class="nav-link" href="#mintmaven">Using Mint with Maven</a></li>
@@ -54,14 +54,12 @@
 						<li class="nav-item"><a class="nav-link" href="#min">Min</a></li>
 						<li class="nav-item"><a class="nav-link" href="#randomInt">RandomInt</a></li>
 				  	</ul></li>
-				  	<!--<li class="nav-item"><a class="nav-link" href="#strings">Strings</a><ul class="nav ml-3">
-						<li class="nav-item"><a class="nav-link" href="#g">Coming Soon</a></li>
-				  	</ul></li>-->
+				  	<li class="nav-item"><a class="nav-link" href="#changelog">Changelog</a></li>
 			  </ul>
 			</div>
 		</div>
 		
-		<div class = "scrollspy-example col-10">
+		<div class = "scrollspy-example col-lg-10">
 		
 			<div class="row">
 			<div class="col-md-12">
@@ -76,15 +74,15 @@
 			</div>
 			
 			<div class="mt-4">
-				<h3 id="introduction">Introduction</h3><hr>
-				<p>Mint Java Library is a collection of useful methods for Arrays, Numbers and much more, which comes in handy everyday.<br>
+				<h3 id="introduction">Introduction</h3><hr />
+				<p>Mint Java Library is a collection of useful methods for Arrays, Numbers and much more, which comes in handy everyday.<br />
 					It is so designed that it don't use a single library (not even of java's packages!)</p>
 			</div>
 			
 			<div class="mt-4">
 				<h3 id="download">Downloads</h3>
 				<div class="btn-group">
-				<a href="https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=com.github.manjotsidhu&a=mint&v=1.0-SNAPSHOT&e=jar" type="button" class="btn peach-gradient btn-rounded">Compiled Mint library <span class="badge badge-pill badge-light">JAR</span></h1></a>
+				<a href="https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=com.github.manjotsidhu&a=mint&v=1.0-SNAPSHOT&e=jar" type="button" class="btn peach-gradient btn-rounded">Compiled Mint library <span class="badge badge-pill badge-light">JAR</span></a>
 				<a href="https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=com.github.manjotsidhu&a=mint&v=1.0-SNAPSHOT&e=jar&c=sources" type="button" class="btn purple-gradient btn-rounded">Source Code <span class="badge badge-pill badge-light">JAR</span></a>
 				<a href="https://github.com/manjotsidhu/Mint/archive/master.zip" type="button" class="btn purple-gradient btn-rounded">Source Code <span class="badge badge-pill badge-success">ZIP</span></a>				
 				<a href="https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=com.github.manjotsidhu&a=mint&v=1.0-SNAPSHOT&e=jar&c=javadoc" class="btn blue-gradient btn-rounded">JavaDoc <span class="badge badge-pill badge-light">JAR</span></a>
@@ -93,9 +91,9 @@
 			</div>
 
 			<div class="mt-4">
-				<h3 id="mintmaven">Using Mint with Maven</h3><hr>
+				<h3 id="mintmaven">Using Mint with Maven</h3><hr />
 			
-				<p>To use mint with maven, you can use mint library available in Maven Central by adding the following dependency:<br>
+				<p>To use mint with maven, you can use mint library available in Maven Central by adding the following dependency:<br /></p>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				&lt;dependencies&gt;
 					&lt;dependency&gt;
@@ -104,9 +102,7 @@
 						&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
 						&lt;scope&gt;compile&lt;/scope&gt;
 					&lt;/dependency&gt;
-				&lt;/dependencies&gt;</code></pre>		
-				</p>
-					
+				&lt;/dependencies&gt;</code></pre>			
 			</div>
 	
 			<div class="mt-4">
@@ -205,14 +201,14 @@
 				</p><hr>
 					
 				<h4 id="randomIntArray"><strong>RandomIntArray</strong> <small class="text-muted"><code>randomIntArray()</code></small></h4>
-				<p>Generates random integer array of length less than 10 and numbers less than 100.<br>
+				<p>Generates random integer array of length less than 10 and numbers less in the range [0, 100].<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				System.out.println(mintMe.toString(mintMe.randomIntArray()));</code><br>
 				<kbd>=&gt; [35, 20, 14, 13]</kbd></pre>	
 				</p><hr>
 					
 				<h4><strong>RandomIntArray</strong> <small class="text-muted"><code>randomIntArray(int n, int m)</code></small></h4>
-				<p>Generates random integer array of length less than <code>n</code> and numbers less than <code>m</code>.<br>
+				<p>Generates random integer array of length less than <code>n</code> and numbers in the range [0, <code>m</code>].<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				System.out.println(mintMe.toString(mintMe.randomIntArray(20, 9999)));</code><br>
 				<kbd>=&gt; [1285, 9323, 4857, 1324, 9172, 479, 4317, 8779, 9379, 3562]</kbd></pre>
@@ -302,7 +298,7 @@
 				<p>Inorder to use <code>mintNumbers</code>, import the class by:</p>
 				<samp><span class="blue-text">import</span> com.github.manjotsidhu.mint.mintNumbers;</samp><hr>				
 
-				<h4 id="ceil"><strong>Ceil</strong> <small class="text-muted"><code>&lt;E extends Number&gt; int ceil(E number)</code></small></h4>
+				<h4 id="ceil"><strong>Ceil</strong> <small class="text-muted"><code>&lt;E extends Number&gt; int ceil(final E number)</code></small></h4>
 				<p>Ceil inputs any real number <code>X</code> of datatype <code>E</code> and returns the least integer greater than or equal to x.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				System.out.println(mintMe.ceil(-99.4));</code></pre>
@@ -337,11 +333,16 @@
 
 				</div>
 
-			<!--<div class="mt-4">
-				<h3 id="strings">Strings</h3><hr>
-			
-				<h4 id="cs"><strong>Coming Soon</strong> <small class="text-muted"><code></code></small></h4>	
-			</div>-->
+				<div class="mt-4">
+				<h3 id="changelog">Changelog</h3>
+				<ul>
+				<li><h3><span class="badge green">v1.0</span></h3>	
+						<ul>
+							<li class="ml-2">Initial Release (18 methods in mintArrays, 5 methods in mintNumbers).</li>
+						<ul>
+				</li>
+					</ul>
+				</div>
 	
 		</div>
 	</div>
