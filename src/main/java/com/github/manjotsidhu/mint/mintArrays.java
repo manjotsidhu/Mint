@@ -404,7 +404,7 @@ public class mintArrays {
     }
 
     /**
-     * Drops the specified element at <code>index</code> and returns the rest of
+     * Drops the specified element(s) at <code>index</code> and returns the rest of
      * the array
      *
      * @param <E> Generic datatype element
@@ -413,13 +413,15 @@ public class mintArrays {
      * @return Returns New array after dropping the specified index
      * @since 1.0
      */
-    public static <E> E[] drop(final E[] array, final int index) {
-        Object[] newArr = new Object[array.length - 1];
+    public static <E> E[] drop(E[] array, int ...index) {
+        E[] newArr = array.clone();
 
-        System.arraycopy(array, 0, newArr, 0, index);
-        System.arraycopy(array, index + 1, newArr, index, array.length - index - 1);
-
-        return (E[]) newArr;
+        for(int element : index) {
+            System.arraycopy(array, 0, newArr, 0, index.length-1);
+            System.arraycopy(array, element + 1, newArr, element, array.length - element - 1);
+        }
+        
+        return newArr;
     }
 
     /**
@@ -433,10 +435,10 @@ public class mintArrays {
      * @since 1.0
      */
     public static <E> int find(final E[] array, final E element) {
-            for (int index = 0; index < array.length; index++) {
-                if (array[index] == element) {
-                    return index;
-                }
+        for (int index = 0; index < array.length; index++) {
+            if (array[index] == element) {
+                return index;
+            }
         }
 
         return -1;
