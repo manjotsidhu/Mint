@@ -114,8 +114,8 @@
 				<p>Checks if <code>array</code> contains the given <code>element</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {40, 76, 45, 90};
-				System.out.println(mintMe.contains(myArray, 4));
-				System.out.println(mintMe.contains(myArray, 40));</code><br>
+				System.out.println(MintArrays.contains(myArray, 4));
+				System.out.println(MintArrays.contains(myArray, 40));</code><br>
 				<kbd>=&gt; false <br> => true</kbd></pre>
 				</p><hr>
 				
@@ -123,7 +123,7 @@
 				<p>Drops the specified element at <code>index</code> and returns the rest of the array.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {38, 64, 33, 41, 12, 60};
-				System.out.println(mintMe.toString(mintMe.drop(myArray, 2)));</code><br>
+				System.out.println(MintArrays.toString(MintArrays.drop(myArray, 2)));</code><br>
 				<kbd>=&gt; [38, 64, 41, 12, 60]</kbd></pre>
 				</p><hr>
 		
@@ -132,7 +132,7 @@
 				If nothing found then returns <code>-1</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {3, 7, 9, 5, 7, 5, 1, 0, 7};
-				System.out.println(mintMe.find(myArray, 9));</code><br>
+				System.out.println(MintArrays.find(myArray, 9));</code><br>
 				<kbd>=&gt; 2</kbd></pre>
 				</p><hr>
 			
@@ -140,7 +140,7 @@
 				<p>First method returns the first element of the given <code>array</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {85, 93, 14, 78, 79, 66, 16, 90, 21};
-				System.out.println(mintMe.first(myArray));</code><br>
+				System.out.println(MintArrays.first(myArray));</code><br>
 				<kbd>=&gt; 85</kbd></pre>
 				</p><hr>
 
@@ -148,7 +148,7 @@
 				<p>First method returns the first <code>n</code> elements of the given <code>array</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {81, 59, 51, 10, 42, 70, 99};
-				System.out.println(mintMe.toString(mintMe.first(myArray, 3)));</code><br>
+				System.out.println(MintArrays.toString(MintArrays.first(myArray, 3)));</code><br>
 				<kbd>=&gt; [81, 59, 51]</kbd></pre>
 				</p><hr>
 	
@@ -156,7 +156,7 @@
 				<p>Initial returns everything but not the last element of the <code>array</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {46, 29, 53, 82, 6, 18};
-				System.out.println(mintMe.toString(mintMe.initial(myArray)));</code><br>
+				System.out.println(MintArrays.toString(MintArrays.initial(myArray)));</code><br>
 				<kbd>=&gt; [29, 53, 82, 6]</kbd></pre>
 				</p><hr>
 
@@ -164,7 +164,7 @@
 				<p>Initial returns everything but not the <code>n</code> last elements.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
-				System.out.println(mintMe.toString(mintMe.initial(myArray, 3)));</code><br>
+				System.out.println(MintArrays.toString(MintArrays.initial(myArray, 3)));</code><br>
 				<kbd>=&gt; [ab, Az]</kbd></pre>	
 				</p><hr>
 
@@ -172,7 +172,7 @@
 				<p>isFirst checks if the specified <code>element</code> is the first element of <code>array</code> or not.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {37, 62, 37, 27, 77, 27, 39, 93};
-				System.out.println(mintMe.isFirst(myArray, 39));</code><br>
+				System.out.println(MintArrays.isFirst(myArray, 39));</code><br>
 				<kbd>=&gt; false</kbd></pre>
 				</p><hr>
 
@@ -180,7 +180,7 @@
 				<p>isLast checks if the specified <code>element</code> is the last element of <code>array</code> or not.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {37, 62, 37, 27, 77, 27, 39, 93};
-				System.out.println(mintMe.isLast(myArray, 39));</code><br>
+				System.out.println(MintArrays.isLast(myArray, 39));</code><br>
 				<kbd>=&gt; false</kbd></pre>
 				</p><hr>
 
@@ -188,7 +188,7 @@
 				<p>Last returns the last element of the <code>array</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {39, 89, 63, 30, 73, 95, 32, 25, 76};
-				System.out.println(mintMe.last(myArray));</code><br>
+				System.out.println(MintArrays.last(myArray));</code><br>
 				<kbd>=&gt; 76</kbd></pre>
 				</p><hr>
 
@@ -196,21 +196,21 @@
 				<p>Last returns the last <code>n</code> elements of the <code>array</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
-				System.out.println(mintMe.toString(mintMe.last(myArray, 3)));</code><br>
+				System.out.println(MintArrays.toString(MintArrays.last(myArray, 3)));</code><br>
 				<kbd>=&gt; [ac, ae, ss]</kbd></pre>	
 				</p><hr>
 					
 				<h4 id="randomIntArray"><strong>RandomIntArray</strong> <small class="text-muted"><code>randomIntArray()</code></small></h4>
 				<p>Generates random integer array of length less than 10 and numbers less in the range [0, 100].<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				System.out.println(mintMe.toString(mintMe.randomIntArray()));</code><br>
+				System.out.println(MintArrays.toString(MintArrays.randomIntArray()));</code><br>
 				<kbd>=&gt; [35, 20, 14, 13]</kbd></pre>	
 				</p><hr>
 					
 				<h4><strong>RandomIntArray</strong> <small class="text-muted"><code>randomIntArray(int n, int m)</code></small></h4>
 				<p>Generates random integer array of length less than <code>n</code> and numbers in the range [0, <code>m</code>].<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				System.out.println(mintMe.toString(mintMe.randomIntArray(20, 9999)));</code><br>
+				System.out.println(MintArrays.toString(MintArrays.randomIntArray(20, 9999)));</code><br>
 				<kbd>=&gt; [1285, 9323, 4857, 1324, 9172, 479, 4317, 8779, 9379, 3562]</kbd></pre>
 				</p><hr>
 
@@ -218,7 +218,7 @@
 				<p>Resizes the given <code>array</code> as argument and returns a new array of length <code>n</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {2, 3, 74, 37};
-				System.out.println(mintMe.toString(resize(myArray, 2)));</code><br>
+				System.out.println(MintArrays.toString(resize(myArray, 2)));</code><br>
 				<kbd>=&gt; [2, 3]</kbd></pre>
 				</p><hr>
 				
@@ -226,7 +226,7 @@
 				<p>Reverses array <code>arr</code> of <i>almost</i> any datatype <code>E</code>.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				String[] myArray = {"manjot", "singh", "sidhu"};
-				System.out.println(mintMe.toString(mintMe.reverse(myArray)));</code><br>
+				System.out.println(MintArrays.toString(MintArrays.reverse(myArray)));</code><br>
 				<kbd>=&gt; [sidhu, singh, manjot]</kbd></pre>
 				</p><hr>
 					
@@ -234,8 +234,8 @@
 				<p>Sorts Generic number object array in ascending order.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {6, 4, 2, 1, 3, 5, 8, 1, 1222, 99};
-				mintMe.sort(myArray);
-				System.out.println(mintMe.toString(myArray));</code><br>
+				MintArrays.sort(myArray);
+				System.out.println(MintArrays.toString(myArray));</code><br>
 				<kbd>=&gt; [1, 1, 2, 3, 4, 5, 6, 8, 99, 1222]</kbd></pre>
 				</p><hr>
 					
@@ -243,8 +243,8 @@
 				<p>Sorts Generic number object array in descending order.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {6, 4, 2, 1, 3, 5, 8, 1, 99, 1};
-				mintMe.sortD(myArray);
-				System.out.println(mintMe.toString(myArray));</code><br>
+				MintArrays.sortD(myArray);
+				System.out.println(MintArrays.toString(myArray));</code><br>
 				<kbd>=&gt; [99, 8, 6, 5, 4, 3, 2, 1, 1, 1]</kbd></pre>
 				</p><hr>
 				
@@ -252,8 +252,8 @@
 				<p>Sorts array <code>arr</code> of only <code>int[]</code> datatype in alphabetical order.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				int[] myArray = {6, 4, 2, 1, 3, 5, 8, 1, 1222, 99};
-				mintMe.sort(myArray);
-				System.out.println(mintMe.toString(myArray));</code><br>
+				MintArrays.sort(myArray);
+				System.out.println(MintArrays.toString(myArray));</code><br>
 				<kbd>=&gt; [1, 1, 2, 3, 4, 5, 6, 8, 99, 1222]</kbd></pre>
 				</p><hr>
 
@@ -261,8 +261,8 @@
 				<p>Sorts array <code>arr</code> of only <code>int[]</code> datatype in descending order.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				int[] myArray = {6, 4, 2, 1, 3, 5, 8, 1, 99, 1};
-				mintMe.sortD(myArray);
-				System.out.println(mintMe.toString());</code><br>
+				MintArrays.sortD(myArray);
+				System.out.println(MintArrays.toString());</code><br>
 				<kbd>=&gt; [99, 8, 6, 5, 4, 3, 2, 1, 1, 1]</kbd></pre>
 				</p><hr>
 
@@ -270,8 +270,8 @@
 				<p>Sorts array <code>arr</code> of only <code>String[]</code> datatype in ascending order.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
-				mintMe.sort(myArray);
-				System.out.println(mintMe.toString(myArray));</code><br>
+				MintArrays.sort(myArray);
+				System.out.println(MintArrays.toString(myArray));</code><br>
 				<kbd>=&gt; [ab, ac, ae, Az, ss]</kbd></pre>
 				</p><hr>
 
@@ -279,8 +279,8 @@
 				<p>Sorts array <code>arr</code> of only <code>String[]</code> datatype in descending alphabetical order.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				String[] myArray = {"ab", "Az", "ac", "ae", "ss"};
-				mintMe.sortD(myArray);
-				System.out.println(mintMe.toString(myArray));</code><br>
+				MintArrays.sortD(myArray);
+				System.out.println(MintArrays.toString(myArray));</code><br>
 				<kbd>=&gt; [ss, Az, ae, ac, ab]</kbd></pre>
 				</p><hr>
 
@@ -288,7 +288,7 @@
 				<p>toString returns the formal representation of the <code>array</code> in a string.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {56, 53, 53, 96, 27};
-				System.out.println(mintMe.toString(myArray));</code><br>
+				System.out.println(MintArrays.toString(myArray));</code><br>
 				<kbd>=&gt; [56, 53, 53, 96, 27]</kbd></pre>
 				</p><hr>
 				</div>
@@ -301,33 +301,33 @@
 				<h4 id="ceil"><strong>Ceil</strong> <small class="text-muted"><code>&lt;E extends Number&gt; int ceil(final E number)</code></small></h4>
 				<p>Ceil inputs any real number <code>X</code> of datatype <code>E</code> and returns the least integer greater than or equal to x.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				System.out.println(mintMe.ceil(-99.4));</code></pre>
+				System.out.println(MintNumbers.ceil(-99.4));</code></pre>
 				</p><hr>
 
 				<h4 id="floor"><strong>Floor</strong> <small class="text-muted"><code>&lt;E extends Number&gt; int floor(E number)</code></small></h4>
 				<p>Floor inputs any real number <code>X</code> of datatype <code>E</code> and returns the greatest integer less than or equal to x.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				System.out.println(mintMe.floor(-2.7));</code></pre>
+				System.out.println(MintNumbers.floor(-2.7));</code></pre>
 				</p><hr>
 				
 				<h4 id="max"><strong>Max</strong> <small class="text-muted"><code>&lt;T extends Number&gt; T max(T ...x)</code></small></h4>
 				<p>Computes Max of all passed numbers as arguments.
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				System.out.println(mintMe.max(23, 45, 67, 99, 0, -0.99));</code><br>
+				System.out.println(MintNumbers.max(23, 45, 67, 99, 0, -0.99));</code><br>
 				<kbd>=&gt; 99</kbd></pre>
 				</p><hr>
 
 				<h4 id="min"><strong>Min</strong> <small class="text-muted"><code>&lt;T extends Number&gt; T min(T ...x)</code></small></h4>
 				<p>Computes Min of all passed numbers as arguments.
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				System.out.println(mintMe.min(23, 45, 67, 99, 0, -0.99));</code><br>
+				System.out.println(MintNumbers.min(23, 45, 67, 99, 0, -0.99));</code><br>
 				<kbd>=&gt; -0.99</kbd></pre>	
 				</p><hr>
 
 				<h4 id="randomInt"><strong>RandomInt</strong> <small class="text-muted"><code>randomInt(int n)</code></small></h4>
 				<p>RandomInt generates random integer in the range of 0-<code>n</code> numbers.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				System.out.println(mintMe.randomInt(100));</code><br>
+				System.out.println(MintNumbers.randomInt(100));</code><br>
 				<kbd>=&gt; 40</kbd></pre>
 				</p><hr>
 
