@@ -35,6 +35,7 @@
 						<li class="nav-item"><a class="nav-link" href="#initial">Initial</a></li>
 						<li class="nav-item"><a class="nav-link" href="#isFirst">IsFirst</a></li>
 						<li class="nav-item"><a class="nav-link" href="#isLast">IsLast</a></li>
+						<li class="nav-item"><a class="nav-link" href="#intersection">Intersection</a></li>
 						<li class="nav-item"><a class="nav-link" href="#last">Last</a></li>
 						<li class="nav-item"><a class="nav-link" href="#randomIntArray">RandomIntArray</a></li>
 						<li class="nav-item"><a class="nav-link" href="#resize">Resize</a></li>
@@ -46,6 +47,7 @@
 						<li class="nav-item"><a class="nav-link" href="#sortStr">Sort (String)</a></li>
 						<li class="nav-item"><a class="nav-link" href="#sortDStr">SortD (String)</a></li>
 						<li class="nav-item"><a class="nav-link" href="#toString">ToString</a></li>
+						<li class="nav-item"><a class="nav-link" href="#union">Union</a></li>
 				  	</ul></li>
 				  	<li class="nav-item"><a class="nav-link" href="#numbers">Numbers</a><ul class="nav ml-3">
 						<li class="nav-item"><a class="nav-link" href="#ceil">Ceil</a></li>
@@ -75,8 +77,7 @@
 			
 			<div class="mt-4">
 				<h3 id="introduction">Introduction</h3><hr />
-				<p>Mint Java Library is a collection of useful methods for Arrays, Numbers and much more, which comes in handy everyday.<br />
-					It is so designed that it don't use a single library (not even of java's packages!)</p>
+				<p>Mint Java Library is a collection of useful methods for Arrays, Numbers and much more, which comes in handy everyday.</p>
 			</div>
 			
 			<div class="mt-4">
@@ -183,6 +184,18 @@
 				System.out.println(MintArrays.isLast(myArray, 39));</code><br>
 				<kbd>=&gt; false</kbd></pre>
 				</p><hr>
+					
+				<h4 id="intersection"><strong>Intersection</strong> <small class="text-muted"><code>intersecton(E[] array1, E[] array2)</code></small></h4>
+				<p>Intersection returns an array of elements containing common members of <code>array1</code> and <code>array2</code>.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				Integer[] array1 = mintArrays.randomIntArray(10, 10);
+				Integer[] array2 = mintArrays.randomIntArray(10, 10);
+					
+				System.out.println("array1 : " + mintArrays.toString(array1));
+				System.out.println("array2 : " + mintArrays.toString(array2));
+				System.out.println(mintArrays.toString(mintArrays.intersection(array1, array2)));</code><br>
+				<kbd>=&gt; array1 : [3, 9, 6, 8, 8, 9]<br> =&gt; array2 : [5, 6, 0, 6, 0, 8, 0, 6]<br> =&gt; [6, 8, 8]</kbd></pre>
+				</p><hr>
 
 				<h4 id="last"><strong>Last</strong> <small class="text-muted"><code>last(E[] array)</code></small></h4>
 				<p>Last returns the last element of the <code>array</code>.<br>
@@ -284,13 +297,26 @@
 				<kbd>=&gt; [ss, Az, ae, ac, ab]</kbd></pre>
 				</p><hr>
 
-				<h4 id="toString"><strong>toString</strong> <small class="text-muted"><code>toString(E[] array)</code></small></h4>
+				<h4 id="toString"><strong>ToString</strong> <small class="text-muted"><code>toString(E[] array)</code></small></h4>
 				<p>toString returns the formal representation of the <code>array</code> in a string.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				Integer[] myArray = {56, 53, 53, 96, 27};
 				System.out.println(MintArrays.toString(myArray));</code><br>
 				<kbd>=&gt; [56, 53, 53, 96, 27]</kbd></pre>
 				</p><hr>
+					
+				<h4 id="union"><strong>Union</strong> <small class="text-muted"><code>union(E[] array1, E[] array2)</code></small></h4>
+				<p>Union returns an array of elements of <code>array1</code>, in <code>array2</code> or common in both <code>array1</code> and <code>array2</code>.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				Integer[] array1 = mintArrays.randomIntArray(10, 10);
+				Integer[] array2 = mintArrays.randomIntArray(10, 10);
+					
+				System.out.println("array1 : " + mintArrays.toString(array1));
+				System.out.println("array2 : " + mintArrays.toString(array2));
+				System.out.println(mintArrays.toString(mintArrays.union(array1, array2)));</code><br>
+				<kbd>=&gt; array1 : [3, 6]<br> =&gt; array2 : [1, 6, 3, 8, 5, 4, 1]<br> =&gt; [3, 6, 1, 8, 5, 4, 1]</kbd></pre>
+				</p><hr>
+					
 				</div>
 
 				<div class="mt-4">

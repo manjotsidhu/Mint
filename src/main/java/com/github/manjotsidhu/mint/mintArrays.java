@@ -292,10 +292,10 @@ public class mintArrays {
      * @since 1.0
      */
     public static <E> E[] first(final E[] array, final int n) {
-        Object[] newArr = new Object[n];
+        E[] newArr = (E[]) java.lang.reflect.Array.newInstance(array.getClass().getComponentType(), n);
 
         System.arraycopy(array, 0, newArr, 0, n);
-        return (E[]) newArr;
+        return newArr;
     }
 
     /**
@@ -322,10 +322,10 @@ public class mintArrays {
      * @since 1.0
      */
     public static <E> E[] initial(final E[] array) {
-        Object[] newArr = new Object[array.length - 1];
+        E[] newArr = (E[]) java.lang.reflect.Array.newInstance(array.getClass().getComponentType(), array.length - 1);
 
         System.arraycopy(array, 0, newArr, 0, array.length - 1);
-        return (E[]) newArr;
+        return newArr;
     }
 
     /**
@@ -338,10 +338,10 @@ public class mintArrays {
      * @since 1.0
      */
     public static <E> E[] initial(final E[] array, final int n) {
-        Object[] newArr = new Object[array.length - n];
+        E[] newArr = (E[]) java.lang.reflect.Array.newInstance(array.getClass().getComponentType(), array.length - n);
 
         System.arraycopy(array, 0, newArr, 0, array.length - n);
-        return (E[]) newArr;
+        return newArr;
     }
 
     /**
@@ -366,10 +366,10 @@ public class mintArrays {
      * @since 1.0
      */
     public static <E> E[] last(final E[] array, final int n) {
-        Object[] newArr = new Object[n];
+        E[] newArr = (E[]) java.lang.reflect.Array.newInstance(array.getClass().getComponentType(), n);
 
         System.arraycopy(array, array.length - n, newArr, 0, n);
-        return (E[]) newArr;
+        return newArr;
     }
 
     /**
@@ -397,10 +397,15 @@ public class mintArrays {
      * @since 1.0
      */
     public static <E> E[] resize(final E[] array, final int n) {
-        Object[] newArr = new Object[n];
-
-        System.arraycopy(array, 0, newArr, 0, n);
-        return (E[]) newArr;
+        E[] newArr = (E[]) java.lang.reflect.Array.newInstance(array.getClass().getComponentType(), n);
+        
+        if(array.length > n)
+            System.arraycopy(array, 0, newArr, 0, n);
+        else {
+            System.arraycopy(array, 0, newArr, 0, array.length);
+        }
+            
+        return newArr;
     }
 
     /**
@@ -455,9 +460,9 @@ public class mintArrays {
     public static <E> String toString(final E[] array) {
         String toStr = "[";
 
-        for (E element : array) {
-            toStr += element;
-            toStr += (!isLast(array, element)) ? ", " : "";
+        for (int index = 0; index < array.length; index++) {
+            toStr += array[index];
+            toStr += (index == array.length - 1) ? "" : ", ";
         }
         toStr += "]";
         return toStr;
@@ -472,7 +477,6 @@ public class mintArrays {
      * @since 1.0
      */
     public static <E> boolean contains(final E[] array, final E element) {
-        
         if(find(array, element) != -1)  {
             return true;
         }
@@ -514,4 +518,47 @@ public class mintArrays {
         return arr;
     }
     
+    /**
+     * Union returns an array of elements of <code>array1</code>, in 
+     * <code>array2</code> or common in both <code>array1</code> and 
+     * <code>array2</code>  
+     * 
+     * @param array1 first array as argument
+     * @param array2 second array as argument
+     * @return union-ed array of minimum length <code>array1.length</code>
+     */
+    public static <E> E[] union(final E[] array1, final E[] array2) {
+        E[] result = array1.clone();
+        
+        for(E element : array2) {
+            if(!contains(array1, element)) {
+                result = resize(result, result.length + 1);
+                result[result.length - 1] = element;
+            }
+        }
+        
+        return result;
+    }
+    
+    /**
+     * Intersection returns an array of elements containing common members of 
+     * <code>array1</code> and <code>array2</code>
+     * 
+     * @param array1 first array as argument
+     * @param array2 second array as argument
+     * @return intersection array of <code>array1</code> and <code>array2</code>
+     */
+    public static <E> E[] intersection(final E[] array1, final E[] array2) {
+        E[] result = (E[]) java.lang.reflect.Array.newInstance(array1.getClass().getComponentType(), 0);
+        
+        for(E element : array1) {
+            if(contains(array1, element) && contains(array2, element)) {
+                result = resize(result, result.length + 1);
+                result[result.length - 1] = element;
+            }
+        }
+        
+        return result;
+    }
+
 }
