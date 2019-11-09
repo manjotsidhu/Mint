@@ -56,6 +56,10 @@
 						<li class="nav-item"><a class="nav-link" href="#min">Min</a></li>
 						<li class="nav-item"><a class="nav-link" href="#randomInt">RandomInt</a></li>
 				  	</ul></li>
+					<li class="nav-item"><a class="nav-link" href="#strings">Strings</a><ul class="nav ml-3">
+						<li class="nav-item"><a class="nav-link" href="#isUpper">IsUpper</a></li>
+						<li class="nav-item"><a class="nav-link" href="#isLower">IsLower</a></li>
+				  	</ul></li>
 				  	<li class="nav-item"><a class="nav-link" href="#changelog">Changelog</a></li>
 			  </ul>
 			</div>
@@ -327,13 +331,15 @@
 				<h4 id="ceil"><strong>Ceil</strong> <small class="text-muted"><code>&lt;E extends Number&gt; int ceil(final E number)</code></small></h4>
 				<p>Ceil inputs any real number <code>X</code> of datatype <code>E</code> and returns the least integer greater than or equal to x.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				System.out.println(MintNumbers.ceil(-99.4));</code></pre>
+				System.out.println(MintNumbers.ceil(9.7549));</code><br>
+				<kbd>=&gt; 9</kbd></pre>
 				</p><hr>
 
 				<h4 id="floor"><strong>Floor</strong> <small class="text-muted"><code>&lt;E extends Number&gt; int floor(E number)</code></small></h4>
 				<p>Floor inputs any real number <code>X</code> of datatype <code>E</code> and returns the greatest integer less than or equal to x.<br>
 				<pre class="code-toolbar language-markup"><code class="language-markup">
-				System.out.println(MintNumbers.floor(-2.7));</code></pre>
+				System.out.println(MintNumbers.floor(2.123));</code><br>
+				<kbd>=&gt; 3</kbd></pre>
 				</p><hr>
 				
 				<h4 id="max"><strong>Max</strong> <small class="text-muted"><code>&lt;T extends Number&gt; T max(T ...x)</code></small></h4>
@@ -355,6 +361,27 @@
 				<pre class="code-toolbar language-markup"><code class="language-markup">
 				System.out.println(MintNumbers.randomInt(100));</code><br>
 				<kbd>=&gt; 40</kbd></pre>
+				</p><hr>
+
+				</div>
+				
+				<div class="mt-4">
+				<h3 id="strings">Strings <small class="text-muted"><code>com.github.manjotsidhu.mint.mintStrings</code></small></h3>
+				<p>Inorder to use <code>mintStrings</code>, import the class by:</p>
+				<samp><span class="blue-text">import</span> com.github.manjotsidhu.mint.mintStrings;</samp><hr>				
+
+				<h4 id="isUpper"><strong>IsUpper</strong> <small class="text-muted"><code>public static boolean isUpper(String input)</code></small></h4>
+				<p>Checks if a given string contains <b>all</b> upper characters or not.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				System.out.println(MintStrings.isUpper("LoL! I will return False"));</code><br>
+				<kbd>=&gt; false</kbd></pre>
+				</p><hr>
+
+				<h4 id="isLower"><strong>IsLower</strong> <small class="text-muted"><code>public static boolean isLower(String input)</code></small></h4>
+				<p>Checks if a given string contains <b>all</b> lower characters only.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				System.out.println(MintStrings.isLower("lol! i will return true"));</code><br>
+				<kbd>=&gt; true</kbd></pre>
 				</p><hr>
 
 				</div>
