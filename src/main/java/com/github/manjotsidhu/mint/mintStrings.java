@@ -55,4 +55,28 @@ public class mintStrings {
         
         return true;
     }
+
+    /**
+     * Checks if the given string, <code>input</code> contains only alphabets or not.
+     *
+     * @param input String on which the operations is to be performed.
+     * @return Returns the result as boolean (true/false)
+     */
+    public static boolean isAlpha(String input) {
+        return ((input != null)
+                && (!input.equals(""))
+                && (input.matches("^[a-zA-Z]*$")));
+    }
+
+    /**
+     * Checks if the given string, <code>input</code> is alphanumeric or not.
+     *
+     * @param input String on which the operations is to be performed.
+     * @return Returns the result as boolean (true/false)
+     */
+    public static boolean isAlphaNum(String input) {
+        return ((input != null)
+                && (!input.equals(""))
+                && (input.matches("[a-zA-Z0-9]+")));
+    }
 }

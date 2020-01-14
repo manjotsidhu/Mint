@@ -59,6 +59,8 @@
 					<li class="nav-item"><a class="nav-link" href="#strings">Strings</a><ul class="nav ml-3">
 						<li class="nav-item"><a class="nav-link" href="#isUpper">IsUpper</a></li>
 						<li class="nav-item"><a class="nav-link" href="#isLower">IsLower</a></li>
+						<li class="nav-item"><a class="nav-link" href="#isAlpha">IsAlpha</a></li>
+						<li class="nav-item"><a class="nav-link" href="#isAlphaNum">IsAlphaNum</a></li>
 				  	</ul></li>
 				  	<li class="nav-item"><a class="nav-link" href="#changelog">Changelog</a></li>
 			  </ul>
@@ -384,17 +386,34 @@
 				<kbd>=&gt; true</kbd></pre>
 				</p><hr>
 
+				<h4 id="isAlpha"><strong>IsAlpha</strong> <small class="text-muted"><code>public static boolean isAlpha(String input)</code></small></h4>
+				<p>Checks if a given string contains <b>only</b> alphabets.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				System.out.println(MintStrings.isAlpha("HelloWorld"));</code><br>
+				System.out.println(MintStrings.isAlpha("Hello World"));</code><br>
+				<kbd>=&gt; true <br>=&gt; false</kbd></pre>
+				</p><hr>
+
+				<h4 id="isAlphaNum"><strong>IsAlphaNum</strong> <small class="text-muted"><code>public static boolean isAlphaNum(String input)</code></small></h4>
+				<p>Checks if a given string is <b>alphanumeric</b> or not.<br>
+				<pre class="code-toolbar language-markup"><code class="language-markup">
+				System.out.println(MintStrings.isAlphaNum("Hello World"));</code><br>
+				System.out.println(MintStrings.isAlphaNum("Hello World!"));</code><br>
+				<kbd>=&gt; true <br>=&gt; false</kbd></pre>
+				</p><hr>
+
 				</div>
 
 				<div class="mt-4">
 				<h3 id="changelog">Changelog</h3>
 				<ul>
-				<li><h3><span class="badge green">v1.0</span></h3>	
-						<ul>
-							<li class="ml-2">Initial Release (18 methods in mintArrays, 5 methods in mintNumbers).</li>
-						<ul>
-				</li>
-					</ul>
+					<li>
+							<h3><span class="badge green">v1.0</span></h3>
+							<ul>
+								<li class="ml-2">Initial Release (18 methods in mintArrays, 5 methods in mintNumbers).</li>
+							</ul>
+					</li>
+				</ul>
 				</div>
 	
 		</div>
