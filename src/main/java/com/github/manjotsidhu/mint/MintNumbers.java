@@ -20,7 +20,7 @@ package com.github.manjotsidhu.mint;
  *
  * @author ManjotSidhu
  */
-public class mintNumbers {
+public class MintNumbers {
 
     /**
      * Computes Min of all passed numbers as arguments
@@ -31,7 +31,7 @@ public class mintNumbers {
      * @since 1.0
      */
     public static < T extends Number> T min(final T ...x) {
-        mintArrays.sort(x);
+        MintArrays.sort(x);
         return x[0];
     }
 
@@ -44,7 +44,7 @@ public class mintNumbers {
      * @since 1.0
      */
     public static < T extends Number> T max(final T ...x) {
-        mintArrays.sort(x);
+        MintArrays.sort(x);
         return x[x.length-1];
     }
 

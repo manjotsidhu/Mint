@@ -20,7 +20,7 @@ package com.github.manjotsidhu.mint;
  *
  * @author ManjotSidhu
  */
-public class mintArrays {
+public class MintArrays {
 
     /**
      * Reverses array of any data type
@@ -30,7 +30,7 @@ public class mintArrays {
      * @since 1.0
      */
     public static < E> void reverse(E[] ar) {
-        for (int i = 0; i < mintNumbers.floor(ar.length / 2); i++) {
+        for (int i = 0; i < MintNumbers.floor(ar.length / 2); i++) {
             E temp = ar[i];
             ar[i] = ar[ar.length - 1 - i];
             ar[ar.length - 1 - i] = temp;
@@ -270,9 +270,9 @@ public class mintArrays {
      * @since 1.0
      */
     public static <E> boolean[] compareE(final E[] array1, final E[] array2) {
-        boolean[] result = new boolean[mintNumbers.max(array1.length, array2.length)];
+        boolean[] result = new boolean[MintNumbers.max(array1.length, array2.length)];
 
-        for (int index = 0; index < mintNumbers.min(array1.length, array2.length); index++) {
+        for (int index = 0; index < MintNumbers.min(array1.length, array2.length); index++) {
             if (array1[index].equals(array2[index])) {
                 result[index] = true;
             } else {
@@ -503,10 +503,10 @@ public class mintArrays {
      * @since 1.0
      */
     public static Integer[] randomIntArray() {
-        Integer[] arr = new Integer[mintNumbers.randomInt(10)];
+        Integer[] arr = new Integer[MintNumbers.randomInt(10)];
         
         for(int i = 0; i < arr.length; i++) {
-            arr[i] = mintNumbers.randomInt(100);
+            arr[i] = MintNumbers.randomInt(100);
         }
         
         return arr;
@@ -521,10 +521,10 @@ public class mintArrays {
      * @since 1.0
      */
     public static Integer[] randomIntArray(final int n, final int m) {
-        Integer[] arr = new Integer[mintNumbers.randomInt(n)];
+        Integer[] arr = new Integer[MintNumbers.randomInt(n)];
         
         for(int i = 0; i < arr.length; i++) {
-            arr[i] = mintNumbers.randomInt(m);
+            arr[i] = MintNumbers.randomInt(m);
         }
         
         return arr;

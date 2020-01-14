@@ -20,7 +20,7 @@ package com.github.manjotsidhu.mint;
  *
  * @author Manjot Sidhu
  */
-public class mintStrings {
+public class MintStrings {
 
     /**
      * Checks if the string contains <b>all</b> upper case characters in 
